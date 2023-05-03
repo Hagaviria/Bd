@@ -8,14 +8,16 @@ const Image = require('../models/image');
 
 
 router.get('/',async(req,res)=>{
-    res.send('Form Upload')
+    res.send('index');
 });
 
  router.get('/upload', (req, res) => {
     res.render('upload');
  });
-
-
+router.post ('/upload',(req, res) => {
+   console.log(req,file);
+   res.render('uploaded');
+});
 
  router.get('/image/:id',(req,res)=>{
     res.send('Profile Image');
